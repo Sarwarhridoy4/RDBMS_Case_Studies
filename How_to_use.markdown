@@ -198,8 +198,6 @@ Please ensure your changes maintain 3NF and include tests or documentation updat
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Contact
-For questions, bug reports, or suggestions, please open an issue on the repository or contact the project maintainer at [support@medicaldbsystem.org](mailto:support@medicaldbsystem.org).
+For questions, bug reports, or suggestions, please open an issue on the repository or contact the project maintainer at [sarwarhridoy4@gmail.com](mailto:sarwarhridoy4@gmail.com).
 
 ---
-
-Happy data managing!
