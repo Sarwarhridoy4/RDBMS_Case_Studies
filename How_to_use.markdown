@@ -41,7 +41,7 @@ The database consists of six tables with clearly defined relationships:
 ### Normalization
 The schema is in **3NF**, ensuring no insertion, update, or deletion anomalies. Primary and foreign keys enforce referential integrity, and data types are optimized for efficiency (e.g., `Integer` for IDs, `Text` for diagnoses).
 
-For a visual representation, see the [ER Diagram](#https://github.com/Sarwarhridoy4/RDBMS_Case_Studies/blob/main/README.markdown#er-diagram) in the project documentation or generate it using tools like DBeaver or MySQL Workbench.
+For a visual representation, see the [ER Diagram](https://github.com/Sarwarhridoy4/RDBMS_Case_Studies/blob/main/README.markdown#er-diagram) in the project documentation or generate it using tools like DBeaver or MySQL Workbench.
 
 ## Setup Instructions
 
