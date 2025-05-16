@@ -55,17 +55,9 @@ cd medical-database-system
 ### 2. Create the Database
 Log in to your DBMS and create a new database:
 ```sql
-CREATE DATABASE medical_db;
-USE medical_db;
-```
-
-### 3. Execute the Schema
-Run the following SQL script to create the tables and constraints:
-
-```sql
 -- Patients Table
 CREATE TABLE Patients (
-    PatientID INT PRIMARY KEY AUTO_INCREMENT,
+    PatientID SERIAL PRIMARY KEY,
     FirstName VARCHAR(50) NOT NULL,
     LastName VARCHAR(50) NOT NULL,
     DateOfBirth DATE NOT NULL,
@@ -76,7 +68,7 @@ CREATE TABLE Patients (
 
 -- Doctors Table
 CREATE TABLE Doctors (
-    DoctorID INT PRIMARY KEY AUTO_INCREMENT,
+    DoctorID SERIAL PRIMARY KEY,
     FirstName VARCHAR(50) NOT NULL,
     LastName VARCHAR(50) NOT NULL,
     Specialization VARCHAR(100),
@@ -86,7 +78,7 @@ CREATE TABLE Doctors (
 
 -- Medical Facilities Table
 CREATE TABLE Medical_Facilities (
-    FacilityID INT PRIMARY KEY AUTO_INCREMENT,
+    FacilityID SERIAL PRIMARY KEY,
     FacilityName VARCHAR(100) NOT NULL,
     Location VARCHAR(200),
     ContactNumber VARCHAR(15)
@@ -103,7 +95,7 @@ CREATE TABLE Doctor_Facilities (
 
 -- Appointments Table
 CREATE TABLE Appointments (
-    AppointmentID INT PRIMARY KEY AUTO_INCREMENT,
+    AppointmentID SERIAL PRIMARY KEY,
     PatientID INT,
     DoctorID INT,
     AppointmentDate DATE NOT NULL,
@@ -115,14 +107,15 @@ CREATE TABLE Appointments (
 
 -- Medical Records Table
 CREATE TABLE Medical_Records (
-    RecordID INT PRIMARY KEY AUTO_INCREMENT,
+    RecordID SERIAL PRIMARY KEY,
     AppointmentID INT UNIQUE,
     Diagnosis TEXT,
     Prescription TEXT,
     TestResults TEXT,
-    CreatedAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+    CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (AppointmentID) REFERENCES Appointments(AppointmentID) ON DELETE CASCADE
 );
+
 ```
 
 ### 4. Verify the Setup
